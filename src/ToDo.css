@@ -1,0 +1,116 @@
+/* TaskTracker.css */
+
+/* General styles for the Task Tracker app */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Styles for the input and button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input-container input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    width: 70%;
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-container input:focus {
+    border-color: #5cb85c;
+    box-shadow: 0 0 0 0.25rem rgba(92, 184, 92, 0.25);
+}
+
+.input-container button {
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.input-container button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Styles for the task list */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.task-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+
+/* Styles for the checkbox */
+.task-list li input[type="checkbox"] {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+/* Styles for the delete button */
+.delete-button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
