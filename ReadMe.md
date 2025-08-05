@@ -10,7 +10,7 @@ A simple Task Tracker app built in two flavors—React-only and React + Redux—
 - **Delete Task** – Remove any task with one click.  
 - **Mark as Done** – Toggle completion to visually strike through finished tasks.  
 - **Two Implementations**  
-  - **React-only** version using local state (useState/useReducer)  
+  - **React-only** version using local state (useState)  
   - **React + Redux** version using a centralized Redux Toolkit store  
 
 ---
