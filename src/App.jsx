@@ -1,13 +1,18 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
-import ToDo from './ToDo';
+// import ToDo from './ToDo';
+import Todo from './components/todo';
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 function App() {
   
 
   return (
     <>
-     <ToDo/>
+    <Provider store = {store}>
+     < Todo / >
+     </Provider>
     </>
   )
 }
