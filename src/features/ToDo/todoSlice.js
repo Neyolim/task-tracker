@@ -6,7 +6,7 @@ const initialState = {
       id: "abc",
       task: "Demo-task",
       isDone: false,
-    }
+    },
   ],
 };
 
@@ -20,20 +20,22 @@ export const todoSlice = createSlice({
         task: action.payload,
         isDone: false,
       };
-      state.todos.push(newTodo); //direct mutation is possible with redux
+      state.todos.push(newTodo);
     },
     deleteTodo: (state, action) => {
-      state.todos = state.todos.filter((todo) => todo.id != action.payload);
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
     markAsDone: (state, action) => {
+      // Correct way: return a new array from map
       state.todos = state.todos.map((todo) => {
         if (todo.id === action.payload) {
-          todo.isDone = true;
+          return { ...todo, isDone: !todo.isDone }; // Toggle isDone
         }
+        return todo;
       });
     },
   },
 });
 
-export const { addTodo, deleteTodo, markAsDone} = todoSlice.actions;
+export const { addTodo, deleteTodo, markAsDone } = todoSlice.actions;
 export default todoSlice.reducer;
