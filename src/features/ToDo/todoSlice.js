@@ -4,9 +4,9 @@ const initialState = {
   todos: [
     {
       id: "abc",
-      task: "demo-task",
+      task: "Demo-task",
       isDone: false,
-    },
+    }
   ],
 };
 
